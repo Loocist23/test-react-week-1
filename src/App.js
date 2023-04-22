@@ -7,21 +7,21 @@ function MyButton() {
         )
 }
 
-const products = [
-  { title: 'Cabbage', isFruit: false, id: 1 },
+const page = [
+  { title: 'Oui', isFruit: false, id: 1 },
   { title: 'Garlic', isFruit: false, id: 2 },
   { title: 'Apple', isFruit: true, id: 3 },
 ];
 
 function ShoppingList() {
-  const listItems = products.map(product =>
+  const listItems = page.map(pages =>
       <li
-          key={product.id}
+          key={pages.id}
           style={{
-            color: product.isFruit ? 'magenta' : 'darkgreen'
+            color: pages.isFruit ? 'magenta' : 'darkgreen'
           }}
       >
-        {product.title}
+        {pages.title}
       </li>
   );
 
@@ -46,6 +46,7 @@ export default function App() {
   return (
       <div>
             <About />
+            <ShoppingList />
       </div>
 
   );
