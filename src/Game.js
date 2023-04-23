@@ -105,6 +105,8 @@ export default function Game() {
         const nextHistory = [Array(9).fill(null)];
         setHistory(nextHistory);
         setCurrentMove(nextHistory.length - 1);
+        //reset le background des cases gagnantes
+
     }
 
 
