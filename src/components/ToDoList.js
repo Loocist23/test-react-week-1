@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function ToDoList({todo, handleDelete}) {
+export default function ToDoList({todo, onClick}) {
     //state
 
     // comportement
@@ -8,7 +8,7 @@ export default function ToDoList({todo, handleDelete}) {
     // affichage (render)
     return (
         <div>
-            <li>{todo.title} <button onClick={() => handleDelete(todo.id)}> Suprimer</button></li>
+            <li className={"list"}>{todo.title} <button onClick={onClick}> Suprimer</button></li>
         </div>
     )
 }

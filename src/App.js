@@ -11,8 +11,6 @@ export default function App() {
         {id: 3, title: "Faire le ménage", completed: false},
     ]);
 
-
-
     // comportement
     const handleDelete = (id) => {
         console.log(id);
@@ -31,8 +29,6 @@ export default function App() {
         setTodos(newTodos);
     }
 
-
-
     // affichage (render)
 
     return (
@@ -40,7 +36,7 @@ export default function App() {
             <h1>Ma ToDoList</h1>
             <ul>
                 {todos.map((todo) => (
-                    <ToDoList todo={todo} handleDelete={handleDelete} key={todo.id}/>
+                    <ToDoList todo={todo} onClick={() => handleDelete(todo.id)} key={todo.id}/>
                 ))}
                 <button onClick={() => setTodos([])}>Vider la liste</button>
             </ul>
