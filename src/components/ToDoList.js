@@ -7,8 +7,9 @@ export default function ToDoList({todo, onClick}) {
 
     // affichage (render)
     return (
-        <div>
-            <li className={"list"}>{todo.title} <button onClick={onClick}> Suprimer</button></li>
-        </div>
+        <li className={"list"}>
+            {todo.title} <button onClick={onClick}> Suprimer</button>
+        </li>
+
     )
 }
